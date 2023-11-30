@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SportsclubDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Player">
+    <Key>
+      <PropertyRef Name="Player_Id" />
+    </Key>
+    <Property Name="Player_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Player_Name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Player_Age" Type="Int32" />
+    <Property Name="Player_Sport" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Player_Gender" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Playerlogin">
+    <Key>
+      <PropertyRef Name="Player_User_Name" />
+    </Key>
+    <Property Name="Player_User_Name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Player_Password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Player_Nick_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Trainer">
+    <Key>
+      <PropertyRef Name="Trainer_Id" />
+    </Key>
+    <Property Name="Trainer_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Trainer_Name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Trainer_Age" Type="Int32" />
+    <Property Name="Trainer_Sport" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Trainer_Gender" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Trainerlogin">
+    <Key>
+      <PropertyRef Name="Trainer_User_Name" />
+    </Key>
+    <Property Name="Trainer_User_Name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Trainer_Password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Trainer_Nick_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="SportsclubDBEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Players" EntityType="Self.Player" />
+    <EntitySet Name="Playerlogins" EntityType="Self.Playerlogin" />
+    <EntitySet Name="Trainers" EntityType="Self.Trainer" />
+    <EntitySet Name="Trainerlogins" EntityType="Self.Trainerlogin" />
+  </EntityContainer>
+</Schema>

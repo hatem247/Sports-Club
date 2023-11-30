@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SportsclubDBModelStoreContainer" CdmEntityContainer="SportsclubDBEntities1">
+    <EntitySetMapping Name="Players">
+      <EntityTypeMapping TypeName="SportsclubDBModel.Player">
+        <MappingFragment StoreEntitySet="Player">
+          <ScalarProperty Name="Player_Id" ColumnName="Player_Id" />
+          <ScalarProperty Name="Player_Name" ColumnName="Player_Name" />
+          <ScalarProperty Name="Player_Age" ColumnName="Player_Age" />
+          <ScalarProperty Name="Player_Sport" ColumnName="Player_Sport" />
+          <ScalarProperty Name="Player_Gender" ColumnName="Player_Gender" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Playerlogins">
+      <EntityTypeMapping TypeName="SportsclubDBModel.Playerlogin">
+        <MappingFragment StoreEntitySet="Playerlogin">
+          <ScalarProperty Name="Player_User_Name" ColumnName="Player_User_Name" />
+          <ScalarProperty Name="Player_Password" ColumnName="Player_Password" />
+          <ScalarProperty Name="Player_Nick_Name" ColumnName="Player_Nick_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Trainers">
+      <EntityTypeMapping TypeName="SportsclubDBModel.Trainer">
+        <MappingFragment StoreEntitySet="Trainer">
+          <ScalarProperty Name="Trainer_Id" ColumnName="Trainer_Id" />
+          <ScalarProperty Name="Trainer_Name" ColumnName="Trainer_Name" />
+          <ScalarProperty Name="Trainer_Age" ColumnName="Trainer_Age" />
+          <ScalarProperty Name="Trainer_Sport" ColumnName="Trainer_Sport" />
+          <ScalarProperty Name="Trainer_Gender" ColumnName="Trainer_Gender" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Trainerlogins">
+      <EntityTypeMapping TypeName="SportsclubDBModel.Trainerlogin">
+        <MappingFragment StoreEntitySet="Trainerlogin">
+          <ScalarProperty Name="Trainer_User_Name" ColumnName="Trainer_User_Name" />
+          <ScalarProperty Name="Trainer_Password" ColumnName="Trainer_Password" />
+          <ScalarProperty Name="Trainer_Nick_Name" ColumnName="Trainer_Nick_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SportsclubDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Player">
+    <Key>
+      <PropertyRef Name="Player_Id" />
+    </Key>
+    <Property Name="Player_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Player_Name" Type="varchar" MaxLength="30" />
+    <Property Name="Player_Age" Type="int" />
+    <Property Name="Player_Sport" Type="varchar" MaxLength="50" />
+    <Property Name="Player_Gender" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="Playerlogin">
+    <Key>
+      <PropertyRef Name="Player_User_Name" />
+    </Key>
+    <Property Name="Player_User_Name" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Player_Password" Type="varchar" MaxLength="100" />
+    <Property Name="Player_Nick_Name" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Trainer">
+    <Key>
+      <PropertyRef Name="Trainer_Id" />
+    </Key>
+    <Property Name="Trainer_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Trainer_Name" Type="varchar" MaxLength="30" />
+    <Property Name="Trainer_Age" Type="int" />
+    <Property Name="Trainer_Sport" Type="varchar" MaxLength="50" />
+    <Property Name="Trainer_Gender" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="Trainerlogin">
+    <Key>
+      <PropertyRef Name="Trainer_User_Name" />
+    </Key>
+    <Property Name="Trainer_User_Name" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Trainer_Password" Type="varchar" MaxLength="100" />
+    <Property Name="Trainer_Nick_Name" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="SportsclubDBModelStoreContainer">
+    <EntitySet Name="Player" EntityType="Self.Player" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Playerlogin" EntityType="Self.Playerlogin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Trainer" EntityType="Self.Trainer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Trainerlogin" EntityType="Self.Trainerlogin" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
